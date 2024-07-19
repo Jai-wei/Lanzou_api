@@ -132,7 +132,7 @@ def param1(url_param):
             return f"{url_param} 请求失败faild-400，状态码：{response.status_code}"
         else:
             fn = extract_text(
-                response.text, 'src="', '" frameborder')[1]
+                response.text, 'src="', '" frameborder')[0]
     except:
         return f"{url_param} 请求失败faild-400"
 ###### 2 解析fn
